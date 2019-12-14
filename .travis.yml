@@ -2,6 +2,7 @@ sudo: required
 dist: bionic
 before_install:
     - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended latexmk texlive-lang-german texlive-font-utils texlive-science texlive-pictures rubber graphviz inkscape python3-opencv lmodern  texlive-bibtex-extra biber
+    - wget --no-verbose https://raw.githubusercontent.com/cebe/pdfpc-latex-notes/master/pdfpcnotes.sty -O Presentation/pdfpcnotes.sty
       
 git:
     submodules: false 
