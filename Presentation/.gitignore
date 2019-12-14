@@ -1,0 +1,5 @@
+*.nav
+*.snm
+*.pdfpc
+*.xml
+!main.pdf

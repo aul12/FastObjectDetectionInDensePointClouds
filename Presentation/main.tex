@@ -1,0 +1,83 @@
+\documentclass{beamer}
+\mode<presentation>
+{
+    \usetheme{myulm}
+    \setbeamercovered{invisible}
+    \setbeamertemplate{navigation symbols}{} % no navigation bar
+    \setbeamersize{sidebar width left=1.17cm}
+}
+
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{fancyvrb}
+\usepackage{array}
+\usepackage{colortbl} % ING INF PSY
+\usepackage{booktabs}
+\usepackage{mathtools}
+\usepackage{commath}
+\usepackage{siunitx}
+\usepackage{tikz}
+\usepackage{subcaption}
+\usepackage{todonotes}
+\usepackage{pdfpcnotes}
+\usepackage[printonlyused]{acronym}
+\usepackage{diagbox}
+
+\usepackage[style=mrmbibstyle,sorting=anyvt,
+                sortcites=true,firstinits=false,%
+                useprefix=false,%
+                uniquename=init,hyperref=auto,%
+                minnames=3,maxnames=5,%
+                minitems=3,maxitems=99,%
+                minalphanames=3,maxalphanames=4,
+                maxcitenames=99,%
+                autopunct=false,%
+                bibwarn=true, % Warnings for errors in bibfile, default: true
+                backend=biber]{biblatex}
+
+\ExecuteBibliographyOptions{eprint=false, url=false, isbn=false, doi=false, yearonly=true, printlanguage=false, titlesentencecase=false}
+\addbibresource{../bibliography.bib}
+\AtEveryBibitem{%
+  \clearfield{note}%
+}
+
+\DeclareCiteCommand{\xfootcite}[\mkbibfootnote]
+    {\usebibmacro{prenote}}
+    {
+        \usebibmacro{citeindex}%
+        \setunit{\addnbspace}
+        \printnames{author}%
+        \setunit{\labelnamepunct}
+        \printfield[citetitle]{title}%
+        \newunit
+        \printfield{year}
+    }
+    {\addsemicolon\space}
+    {\usebibmacro{postnote}
+}
+
+\definecolor{primary}{rgb}{0.6392,0.1490,0.2196}
+
+\title{Fast Object Detection in Dense Point Clouds}
+\author{Paul Nykiel}
+
+\newcommand{\presdatum}{\today} % alternativ zu \today: Eingabe eines festen Datums
+\institute
+{Institut für Mess-, Regel- und Mikrotechnik\\}
+
+\newcommand{\zwischentitel}{\insertsection}
+\newcommand{\leitthema}{Paul Nykiel}
+
+\begin{document}
+    \hspace*{-1.49cm}
+    \frame[plain]{\titlepage}
+
+    \input{motivation.tex}
+    \input{objekterkennung.tex}
+    \input{evaluation.tex}
+    \input{fazit.tex}
+    \input{backup.tex}
+\end{document}

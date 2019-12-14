@@ -1,0 +1,75 @@
+\only<1>{
+    \begin{figure}[h!]
+        \centering
+        \begin{tikzpicture}
+            \fill[fill=primary] (4,4) circle (0.2cm);
+            \fill[fill=primary] (4.5,4.5) circle (0.2cm);
+            \fill[fill=primary] (5,5) circle (0.2cm);
+            \fill[fill=primary] (5.5,5.5) circle (0.2cm);
+            \fill[fill=primary] (6,6) circle (0.2cm);
+            \fill[fill=primary] (4.5,5.5) circle (0.2cm);
+            \fill[fill=primary] (5.5,4.5) circle (0.2cm);
+            \fill[fill=primary] (4,5) circle (0.2cm);
+            \fill[fill=primary] (6,5) circle (0.2cm);
+            \fill[fill=primary] (5,4) circle (0.2cm);
+            \fill[fill=primary] (5,6) circle (0.2cm);
+
+            \node at(3,3) (){};
+            \node at(7.5,7.5) (){};
+        \end{tikzpicture}
+    \end{figure}
+}
+\only<2>{
+    \begin{figure}[h!]
+        \centering
+        \begin{tikzpicture}
+            \fill[fill=primary] (4,4) circle (0.2cm);
+            \fill[fill=primary] (4.5,4.5) circle (0.2cm);
+            \fill[fill=primary] (5,5) circle (0.2cm);
+            \fill[fill=primary] (5.5,5.5) circle (0.2cm);
+            \fill[fill=primary] (6,6) circle (0.2cm);
+            \fill[fill=primary] (4.5,5.5) circle (0.2cm);
+            \fill[fill=primary] (5.5,4.5) circle (0.2cm);
+            \fill[fill=primary] (4,5) circle (0.2cm);
+            \fill[fill=primary] (6,5) circle (0.2cm);
+            \fill[fill=primary] (5,4) circle (0.2cm);
+            \fill[fill=primary] (5,6) circle (0.2cm);
+
+            \draw[line width=2pt,->] (5,5) -- (7,7);
+
+            \node at(3,3) (){};
+            \node at(7.5,7.5) (){};
+        \end{tikzpicture}
+    \end{figure}
+}
+\only<3->{
+    \begin{figure}[h!]
+        \centering
+        \begin{tikzpicture}
+            \fill[fill=primary] (4,4) circle (0.2cm);
+            \fill[fill=primary] (4.5,4.5) circle (0.2cm);
+            \fill[fill=primary] (5,5) circle (0.2cm);
+            \fill[fill=primary] (5.5,5.5) circle (0.2cm);
+            \fill[fill=primary] (6,6) circle (0.2cm);
+            \fill[fill=primary] (4.5,5.5) circle (0.2cm);
+            \fill[fill=primary] (5.5,4.5) circle (0.2cm);
+            \fill[fill=primary] (4,5) circle (0.2cm);
+            \fill[fill=primary] (6,5) circle (0.2cm);
+            \fill[fill=primary] (5,4) circle (0.2cm);
+            \fill[fill=primary] (5,6) circle (0.2cm);
+
+            \draw[line width=2pt,->] (5,5) -- (7,7);
+            \coordinate (a) at (4.5, 3.2);
+            \coordinate (b) at (6.8, 5.5);
+            \coordinate (c) at (5.5, 6.8);
+            \coordinate (d) at (3.2, 4.5);
+            \draw[line width=2pt] (a) -- (b);
+            \draw[line width=2pt] (b) -- (c);
+            \draw[line width=2pt] (c) -- (d);
+            \draw[line width=2pt] (d) -- (a);
+
+            \node at(3,3) (){};
+            \node at(7.5,7.5) (){};
+        \end{tikzpicture}
+    \end{figure}
+}

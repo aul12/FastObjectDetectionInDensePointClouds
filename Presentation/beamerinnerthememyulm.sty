@@ -1,0 +1,80 @@
+%Titelseite der Präsentation
+
+\ProvidesPackageRCS $Header: /cvsroot/latex-beamer/latex-beamer/themes/inner/beamerinnerthememyulm .sty,v 1.19 2005/06/17 13:40:57 tantau Exp $
+
+% Copyright 2003 by Till Tantau <tantau@users.sourceforge.net>
+%
+% This program can be redistributed and/or modified under the terms
+% of the GNU Public License, version 2.
+
+\mode<presentation>
+
+%Bilder:
+
+\pgfdeclareimage[width=14pt,height=12pt]{beamericonbook}{beamericonbook}
+\pgfdeclareimage[width=14pt,height=12pt]{beamericonbookshaded}{beamericonbook.20}
+\pgfaliasimage{beamericonbook.!20opaque}{beamericonbookshaded}
+\pgfaliasimage{beamericonbook.!15opaque}{beamericonbookshaded}
+\pgfaliasimage{beamericonbook.!10opaque}{beamericonbookshaded}
+\pgfaliasimage{beamericonbook.!5opaque}{beamericonbookshaded}
+\pgfaliasimage{beamericonbook.!2opaque}{beamericonbookshaded}
+\pgfdeclareimage[width=11pt,height=14pt]{beamericonarticle}{beamericonarticle}
+\pgfdeclareimage[width=11pt,height=14pt]{beamericonarticleshaded}{beamericonarticle.20}
+\pgfaliasimage{beamericonarticle.!20opaque}{beamericonarticleshaded}
+\pgfaliasimage{beamericonarticle.!15opaque}{beamericonarticleshaded}
+\pgfaliasimage{beamericonarticle.!10opaque}{beamericonarticleshaded}
+\pgfaliasimage{beamericonarticle.!5opaque}{beamericonarticleshaded}
+\pgfaliasimage{beamericonarticle.!2opaque}{beamericonarticleshaded}
+
+
+
+
+%Titelseite der Prsentation:
+
+\defbeamertemplate*{title page}{myulm}[1][]
+{
+    \vspace{-0.16em}
+%Logo der Uni:
+    \begin{tabular*}{\paperwidth}[b]{p{14em}r}
+        \vspace{0.6em}
+        & \includegraphics[scale=0.26]{logo_100_Pant_RGB.jpg}
+    \end{tabular*}
+%grosses Bild in der Mitte der Startseite:
+      \begin{beamercolorbox}[sep=8pt,left,#1]{institute}
+          \leftskip-2.58em%
+          \vskip-0.8em
+          \includegraphics[width=\paperwidth]{startbild1.jpg}
+        \end{beamercolorbox}
+
+%Bereich unter dem Bild:
+        \begin{beamercolorbox}[sep=8pt,right,#1]{title}
+            \leftskip-3em%
+            \vskip-1.0em%
+             \begin{tabular*}{\paperwidth}[b]{p{16em}p{16em}}
+%Titel der Präsentation:
+                  & \usebeamerfont{title}\parbox{16em}{\inserttitle}\\%
+                  \\
+                  \hspace{0.3cm}
+				  \textcolor[rgb]{0,0,0}{  \parbox[t]{15.5em}
+                  {\tiny \insertauthor\ $\vert$ \presdatum\ $\vert$ \insertinstitute}}%
+%Untertitel der Präsentation:
+               & {\usebeamerfont{subtitle}\parbox{17em}{\insertsubtitle}}\\%
+             \end{tabular*}
+        \end{beamercolorbox}%
+
+    {\usebeamercolor[fg]{titlegraphic}\inserttitlegraphic\par}
+  \vfill
+}
+
+
+% Part page: myulm 
+\defbeamertemplate*{part page}{myulm }[1][]
+{
+  \begin{centering}
+    {\usebeamerfont{part name}\usebeamercolor[fg]{part name}\partname~\insertromanpartnumber}
+    \vskip1em\par
+    \begin{beamercolorbox}[sep=8pt,center,#1]{part title}
+      \usebeamerfont{part title}\insertpart\par
+    \end{beamercolorbox}
+  \end{centering}
+} 

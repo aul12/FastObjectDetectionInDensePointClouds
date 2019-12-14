@@ -1,0 +1,170 @@
+\NeedsTeXFormat{LaTeX2e}
+\documentclass[a4paper,12pt,
+headsepline,           % Linie zw. Kopfzeile und Text
+oneside,               % einseitig
+pointlessnumbers,      % keine Punkte nach den letzten Ziffern in Überschriften
+bibtotoc,              % LV im IV
+%DIV=15,               % Satzspiegel auf 15er Raster, schmalere Ränder   
+BCOR15mm               % Bindekorrektur
+%,draft
+]{scrbook}
+\KOMAoptions{DIV=last} % Neuberechnung Satzspiegel nach Laden von Paket helvet
+
+\pagestyle{headings}
+\usepackage{blindtext}
+
+% für Texte in deutscher Sprache
+%\usepackagemngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Helvetica als Standard-Dokumentschrift
+\usepackage[scaled]{helvet}
+\renewcommand{\familydefault}{\sfdefault} 
+
+\usepackage{graphicx}
+
+% Literaturverzeichnis mit BibLKaTeX
+\usepackage[babel]{csquotes}
+\usepackage[backend=biber]{biblatex}
+\bibliography{bibliography}
+\AtEveryBibitem{%
+  \clearfield{note}%
+}
+
+\usepackage{tabularx} 
+
+% Besondere Schriftauszeichnungen
+\usepackage{url}              % \url{http://...} in Schreibmaschinenschrift
+\usepackage{color}            % zum Setzen farbigen Textes
+
+\usepackage{amssymb, amsmath} % Pakete für Mathe-Umgebungen und -Symbole
+
+\usepackage{setspace}         % Paket für div. Abstände, z.B. ZA
+\usepackage{subcaption}
+%\onehalfspacing              % nur dann, wenn gefordert; ist sehr groß!!
+\setlength{\parindent}{0pt}   % kein linker Einzug der ersten Absatzzeile
+\setlength{\parskip}{1.4ex plus 0.35ex minus 0.3ex} % Absatzabstand, leicht variabel
+
+\usepackage{todonotes}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage{diagbox}
+\usepackage{booktabs}
+\usepackage{siunitx}
+
+\makeatletter
+\def\BState{\State\hskip-\ALG@thistlm}
+\makeatother
+
+% Tiefe, bis zu der Überschriften in das Inhaltsverzeichnis kommen
+\setcounter{tocdepth}{3}      % ist Standard
+
+\newcommand{\fullname}{Paul Nykiel}
+\newcommand{\email}{paul.nykiel@uni-ulm.de}
+\newcommand{\titel}{Fast Object Detection in Dense Pointclouds}
+\newcommand{\jahr}{2019}
+\newcommand{\matnr}{941496}
+\newcommand{\gutachterA}{Prof. Dr.-Ing. Klaus Dietmayer}
+\newcommand{\gutachterB}{Jun.-Prof. Dr. rer. nat. Vasileios Belagiannis  }
+\newcommand{\betreuer}{Martin Herrmann}
+
+\newcommand{\fakultaet}{Ingenieurwissenschaften, Informatik und\\Psychologie}
+\newcommand{\institut}{Institut für Mess-, Regel- und Mikrotechnik}
+
+% Informationen, die LaTeX in die PDF-Datei schreibt
+\pdfinfo{
+  /Author (\fullname)
+  /Title (\titel)
+  /Producer     (pdfeTex 3.14159-1.30.6-2.2)
+  /Keywords ()
+}
+
+\usepackage{hyperref}
+\hypersetup{
+pdftitle=\titel,
+pdfauthor=\fullname,
+pdfsubject={Diplomarbeit},
+pdfproducer={pdfeTex 3.14159-1.30.6-2.2},
+colorlinks=false,
+pdfborder=0 0 0	% keine Box um die Links!
+}
+
+% Trennungsregeln
+\hyphenation{Sil-ben-trenn-ung}
+
+\begin{document}
+\frontmatter
+
+% Titelseite
+\thispagestyle{empty}
+\begin{addmargin*}[4mm]{-10mm}
+
+\includegraphics[height=1.8cm]{images/unilogo_bild}
+\hfill
+\includegraphics[height=1.8cm]{images/unilogo_wort}\\[1em]
+
+{\footnotesize
+%{\bfseries Universität Ulm} \textbar ~89069 Ulm \textbar ~Germany
+\hspace*{115mm}\parbox[t]{35mm}{\bfseries Fakultät für\\
+\fakultaet\\
+% TODO hier Institut anpassen
+\mdseries \institut}\\[2cm]
+
+\parbox{140mm}{\bfseries \LARGE \titel}\\[2.5em]
+{\footnotesize Abschlussarbeit an der Universität Ulm}\\[3em]
+
+{\footnotesize \bfseries Vorgelegt von:}\\
+{\footnotesize \fullname\\ \email}\\ \matnr\\[2em]
+{\footnotesize \bfseries Gutachter:}\\                     
+{\footnotesize \gutachterA\\ \gutachterB}\\[2em]
+{\footnotesize \bfseries Betreuer:}\\ 
+{\footnotesize \betreuer}\\\\
+{\footnotesize \jahr}
+}
+\end{addmargin*}
+
+
+% Impressum
+\clearpage
+\thispagestyle{empty}
+{ \small
+  \flushleft
+  Version \today \\\vfill
+  \copyright~\jahr~\fullname\\[0.5em]
+% Wenn Sie Ihre Arbeit unter einer freien Lizenz bereitstellen möchten, können Sie die nächste Zeile in Ihren Code aufnehmen. Bitte beachten Sie, dass Sie hierfür an allen Inhalten, inklusive enthaltener Abbildungen, die notwendigen Rechte benötigen! Beim Veröffentlichungsexemplar Ihrer Dissertation achten Sie bitte darauf, dass der Lizenztext nicht den Angaben in den Metadaten der genutzten Publikationsplattform widerspricht. Nähere Information zu den Creative Commons Lizenzen erhalten Sie hier: https://creativecommons.org/licenses/
+This work is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License. To view a copy of this license, visit \href{https://creativecommons.org/licenses/by/4.0/}{https://creativecommons.org/licenses/by/4.0/} or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA. \\
+  Satz: PDF-\LaTeXe
+}
+
+% ab hier Zeilenabstand etwas größer 
+\setstretch{1.2}
+
+\tableofcontents
+
+\mainmatter
+\input{intro.tex}
+\input{theorie.tex}
+\input{objectdetection.tex}
+\input{evaluation.tex}
+\input{conclusion.tex}
+
+\appendix
+
+\backmatter
+
+\printbibliography
+
+\clearpage
+\thispagestyle{empty}
+
+Name: \fullname \hfill Matrikelnummer: \matnr \vspace{2cm}
+
+\minisec{Erklärung}
+
+Ich erkläre, dass ich die Arbeit selbständig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel verwendet habe.\vspace{2cm}
+
+Ulm, den \dotfill
+
+\hspace{10cm} {\footnotesize \fullname}
+\end{document}

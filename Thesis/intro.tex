@@ -1,0 +1,23 @@
+\chapter{Introduction}
+
+In recent years many improvements in driver assistance systems have been made \cite{autonomesFahren}.
+Vehicle manufactures and researchers aim to produce fully self driving vehicles in the next years.
+Such vehicles are able to drive according to the traffic rules without human involvement.
+For this a wide variety of algorithms have to be developed, implemented and tested.
+These algorithms need to be reliable to guarantee the safety of the passengers and all other road users. Additionally the algorithms are required to process the sensor data in real time to guarantee a timely response of the vehicle.
+
+To get students interested in the topic of self driving systems and driver assistance systems the University of Technology Braunschweig organizes the Carolo-Cup. The aim of the competition is
+to build an automated \ac{rc}-Car at a scale of 1:10. 
+The vehicle needs to master a scenario which is derived from scenarios that occur in the real world and drive as far as possible. 
+The scenario consists of the track with road markings, crossings, obstacles, signs, pedestrians and slopes. Each of these features need to be detected by the vehicle in real time.
+
+Ulm University is participating in this competition with a group of students. The primary sensors of the vehicle are a colour camera and an \ac{d435} which captures a point cloud.
+
+The objective of this work is to implement an algorithm which is able to robustly detect and classify all objects occurring on the track, that are signs, obstacles, pedestrians and slopes, using the point cloud provided by the \ac{d435}. 
+The algorithm used for the detection should be able to process the data in real time with the limited resources available on the vehicle to be able to be used on the vehicle.
+
+Additionally the algorithm should be evaluated on point clouds acquired in the real world using a stereo camera system. For this data from the MEC-View project \cite{mec} and the Kitti dataset \cite{Menze2015CVPR} is used.
+
+The thesis is structured in four chapters:
+in Chapter \ref{sec:theo} the theoretical background required for the thesis is explained. Chapter \ref{sec:det} introduces the algorithm used for object detection. In Chapter \ref{sec:eval} the performance of the algorithm is evaluated and compared to other algorithms. Lastly the results are summarized and possible future improvements are listed in Chapter \ref{sec:conc}.
+

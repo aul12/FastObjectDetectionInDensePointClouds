@@ -1,0 +1,110 @@
+\documentclass[language=en,thesis=bachelor,logopath=images/]{mrmthesis}     % <-- [your options (see docu)]
+
+\usepackage{fixltx2e}                  %fix problems in LaTeX that it "`would be nice"' to correct before next LaTeX release
+
+%note: AMSmath Package is already loaded by mrmthesis to avoid problems with hyperref
+
+\usepackage{amssymb}                   %special characters in AMS
+\usepackage{amsfonts}                  %TeX fonts from the American Mathematical Society
+\usepackage{todonotes}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage{diagbox}
+\usepackage{booktabs}
+\usepackage[printonlyused, withpage]{acronym}
+\usepackage{siunitx}
+\usepackage[section]{placeins}
+\usepackage{mathtools}
+\usepackage{commath}
+
+\usetikzlibrary{arrows}
+
+\newcommand{\normalize}[1]{\frac{#1}{\norm{#1}}}
+\definecolor{primary}{RGB}{165,200,225}
+\tikzstyle{neuron}=[circle,fill=primary,draw=black,minimum size=30pt,inner sep=0pt]
+
+\AtEveryBibitem{%
+  \clearfield{note}%
+}
+
+%--------------------------------------------------------------
+%% set options for mrmbibstyle:
+%% url, ISBN, eprint, DOI: content of respective field is never printed if set to false (default)
+%% printlanguage: if set to false (default), the language field is never printed. set to true and use standard
+%%      biblatex option clearlang to print language fielf for specific languages (see biblatex manual)
+%% yearonly: if set true (default), do not print day or month of a publication even if given
+%% titlesentencecase: If set to false (default), all titles are written as given in the bib file. If set to true,
+%%      all titles of articels, inproceedings etc. (but not booktitle etc.) are transformed to sentence case,
+%%      i.e. only the first letter of the title is capital, all other words start with small letters even if
+%%      capital letters in the bib file. Use additional curly braces e.g. for abbreviations which should
+%%      remain capital letters (as in original bibtex). The command has no effect on entries where the entry
+%%      field "hyphenation" is set to e.g. "ngerman".
+\ExecuteBibliographyOptions{eprint=false, url=false, isbn=false, doi=false, yearonly=true, printlanguage=false, titlesentencecase=false}
+
+%\ExecuteBibliographyOptions{firstinits=true} %activate, if all given names shall be abbreviated to initials
+
+%%Use field hyphenation for bib entries to set the language of the bib entry, e.g. for correct hyphenation.
+%%Do not mix up with the hyphenation command below!
+\ExecuteBibliographyOptions{babel=hyphen} %uses hyphenation for language given in entry's hyphenation field (or global language otherwise)
+
+
+%% Using new command to add bib file, set options for not printing
+\addbibresource{bibliography.bib} % <- type in your bibfile
+
+%% If the above does not work with older versions of biblatex,
+%% try the compatibility mode using the folling command instead:
+%\bibliography{bibliography}      % <- type in your bibfile
+%--------------------------------------------------------------
+%\bibliography{bibliography}
+
+%\hyphenation{}                         %insert hyphenations for unknown words
+
+
+\title{Fast Object Detection in Dense Point Clouds}
+%\descriptiontitle{title for thesis description page with different line-breaks, if necessary} % Default: \title
+%\affirmationtitle{title for affirmation page with different line-breaks, if necessary} % Default: \title
+\author[m]{Paul Nykiel} %use optional argument [f] for female label, default is [m] for male
+%\authortitle{B.\,Sc.} %default: None, please note: use class option namebehindauthortitle if title should be printed in front of the name
+\supervisor[m]{M.Sc. Martin Herrmann}
+\examiner{Prof. Dr.-Ing. Klaus Dietmayer}
+\coexaminer{Jun.-Prof. Dr. rer. nat. Vasileios Belagiannis}
+\issuedate{01.05.2019}
+\submissiondate{\today}
+
+\begin{document}
+    \frontmatter
+    \maketitle
+    \projectdescription{\input{projectdescription.tex}}
+
+    \affirmation
+
+    %\extrafrontchapter{Foreword}{type in your text here} %or some other optional stuff
+    %\extrafrontchapter{Thanks}{type in your text here}
+    
+    \setcounter{tocdepth}{2}
+    \tableofcontents
+    \listoffigures
+    \listoftables
+    %\printnomenclature        %PLEASE NOTE: If you don't change the MakeIndex argument
+                             % in the output-profile into
+                             % "%bm.nlo" -s nomencl.ist -o "%bm.nls", no output will be produced
+    \chapter*{List of Acronyms}
+    \input{abbreviations.tex}    
+
+    \mainmatter                       %import chapters (tip: use one tex-file for each chapter)
+    \input{intro.tex}
+    \input{theorie.tex}
+    \input{objectdetection.tex}
+    \input{evaluation.tex}
+    \input{conclusion.tex}
+
+    \appendix                        %import all your appendix stuff here
+    %\input{doc/}
+    %\input{doc/}
+    % - - - - - - - - - - - - - - -
+    \backmatter
+    %  \nocite{*} %add all items of bib file to bibliography. Replace "*" by a list of specific
+    %             % bibentry keys to select only some, or comment this line
+    %             %normally, all bib entries should be cited in the text
+    \printbibliography[heading=bibintoc]
+\end{document}                      %yeah, you're done

@@ -1,0 +1,905 @@
+@article{Bin19,
+    author    = {Bin Yang and
+        Wenjie Luo and
+            Raquel Urtasun},
+    title     = {PIXOR: Real-time 3D Object Detection from Point Clouds},
+    year      = {2019},
+    journal   = {CoRR},
+    volume    = {abs/1902.06326},
+    url       = {http://arxiv.org/abs/1902.06326},
+    archivePrefix = {arXiv},
+    eprint    = {1902.06326},
+    timestamp = {Tue, 21 May 2019 18:03:37 +0200},
+    biburl    = {https://dblp.org/rec/bib/journals/corr/abs-1902-06326},
+    bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{MHWu08,
+    author = {{M. Himmelsbach} and A. M{\"u}ller and T. L{\"u}ttel and W{\"u}nsche, H.-J.},
+    note = {1, Apr; Occupancy Grid, Connected Components, SVM},
+    title = {LIDAR-based 3D Object Perception},
+    year = {2008}
+}
+
+@article{HivHWu10,
+    author = {Himmelsbach, M. and v. Hundelshausen, Felix and Wuensche, H.-J.},
+    note = {1. Apr; Quasi nur Lidar},
+    title = {Fast Segmentation of 3D Point Clouds for Ground Vehicles},
+    year = {2010}
+}
+
+@mastersthesis{Mil16,
+    author = {Milbach, Sean},
+    note = {5. April; Bachelorarbeit, Grundlagen zu Stereokamera und Structuredlight},
+    title = {3D Rekonstruktion eines Raumes, mittels Microsoft Kinect und Point Cloud Library},
+    year = {2016}
+}
+
+@article{Dom15,
+    author = {{Dominic Zeng Wang} and Ingmar Posner},
+    note = {2. Apr; SVM auf vollem Voxel-Raster, Recht langsam (~300ms)},
+    title = {Voting for Voting in Online Point Cloud Object Detection},
+    year = {2015}
+}
+
+@article{Li16,
+    author = {Li, Bo},
+    note = {2. Apr; 3D-CNN, vermutlich zu langsam},
+    title = {3D Fully Convolutional Network for Vehicle Detection in Point Cloud},
+    year = {2016}
+}
+
+@article{Yin17,
+    author = {{Yin Zhou} and Oncel Tuzel},
+    note = {2. Apr; Feature aus Voxel, CNN, 225ms auf Titan X},
+    title = {VoxelNet: End-to-End Learning for Point Cloud Based 3D Object Detection},
+    year = {2017}
+}
+
+@article{Xia16,
+    author = {{Xiaozhi Chen} and Huimin Ma and Ji Wan and Bo Li and Tian Xia},
+    note = {2. Apr; Kombination aus Birdview, Frontansicht und RGB},
+    title = {Multi-View 3D Object Detection Network for Autonomous Driving},
+    year = {2016}
+}
+
+@article{Ann08,
+    author = {{Anna Petrovskaya} and Sebastian Thrun},
+    note = {3. Apr; Partikelfilter, nur Fahrzeuge},
+    title = {Model Based Vehicle Tracking for Autonomous Driving in Urban Environments},
+    year = {2008}
+}
+
+@article{Ale11,
+    author = {{Alex Teichman} and Jesse Levinson and Sebastian Thrun},
+    note = {3. Apr; 2D-Grid, Connected Components (Flood Fill)},
+    title = {Towards 3D Object Recognition via Classification of Arbitrary Object Tracks},
+    year = {2011}
+}
+
+@article{Ale18,
+    author = {{Alex H. Lang} and Sourabh Vora and Holger Caesar and Lubing Zhou and Jiong Yang},
+    note = {4. Apr; Gelernte Features f{\"u}r CNN, wohl Echtzeitf{\"a}hig (16ms auf 1080Ti), Performance O(1/n) mit n ist Bin-Size},
+    title = {PointPillars: Fast Encoders for Object Detection from Point Clouds},
+    year = {2018}
+}
+
+@article{YanLi18,
+    author = {{Yan Yan} and Yuxing Mao and Li and Bo},
+    note = {4. Apr; 25ms auf 1080Ti, Data Augmentation durch einsetzten von Objekten in Point Clouds, Sparse Convolution},
+    title = {SECOND: Sparsely Embedded Convolutional Detection},
+    year = {2018}
+}
+
+@article{Mar18,
+    author    = {Martin Simon and
+        Stefan Milz and
+            Karl Amende and
+            Horst{-}Michael Gross},
+    title     = {Complex-YOLO: Real-time 3D Object Detection on Point Clouds},
+    year      = {2018},
+    journal   = {CoRR},
+    volume    = {abs/1803.06199},
+    url       = {http://arxiv.org/abs/1803.06199},
+    archivePrefix = {arXiv},
+    eprint    = {1803.06199},
+    timestamp = {Mon, 13 Aug 2018 16:48:41 +0200},
+    biburl    = {https://dblp.org/rec/bib/journals/corr/abs-1803-06199},
+    bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{Cha17,
+    author = {{Charles R. Qi} and Wei Liu and Chenxia Wu and Hao Su and Leonidas J. Guibas},
+    note = {5. Apr; ROI aus Farbbild (CNN), Segmentierung in Frustum, Box Estimation (PointNet)},
+    title = {Frustum PointNets for 3D Object Detection from RGB-D Data},
+    year = {2017}
+}
+
+@article{Wal18,
+    author = {{Waleed Ali} and Sherif Abdelkarim and Mohamed Zahran and Mahmoud Zidan1 and Ahmad El Sallab},
+    note = {5, Apr; Yolov2 komplett in 3D mit Yaw-Prediction. Vergleichbare Performance zu Complex YOLO},
+    title = {YOLO3D: End-to-end real-time 3D Oriented Object Bounding Box Detection from LiDAR Point Cloud},
+    year = {2018}
+}
+
+@article{BoLXia16,
+    author = {{Bo Li} and Tianlei Zhang and Xia and Tian},
+    note = {5. Apr; Nutzt aus das Lidar auf Kreisbahn},
+    title = {Vehicle Detection from 3D Lidar Using Fully Convolutional Network},
+    year = {2016}
+}
+
+@article{Tsu16,
+    author = {{Tsung-Yi Lin} and Piotr Dollar and Ross Girshick and Kaiming He and Bharath Hariharan and Serge Belongie},
+    note = {5. Apr; Feature Pyramide f{\"u}r NNs},
+    title = {Feature Pyramid Networks for Object Detection},
+    year = {2016}
+}
+
+@online{Kap18,
+    author = {Kapica, Pawe{\l}},
+    month = {jun},
+    note = {5 Apr; Implementierung von YoloV3 in Tensorflow},
+    title = {Implementing YOLO v3 in Tensorflow (TF-Slim)},
+    url = {https://itnext.io/implementing-yolo-v3-in-tensorflow-tf-slim-c3c55ff59dbe},
+    year = {2018}
+}
+
+@article{Xue19,
+    author = {{Xuesong Li} and Jose E Guivant and Ngaiming Kwok and Yongzhi Xu},
+    note = {5 Apr; Komplette Verarbeitung mit 3D-CNNs, nicht Echtzeitf{\"a}hig, Sparse Convolution},
+    title = {3D Backbone Network for 3D Object Detection},
+    year = {2019}
+}
+
+@article{Shi18,
+    author = {{Shivang Agarwal} and Jean Ogier du Terrail and Fr{\'e}d{\'e}ric Jurie},
+    note = {5. Apr; Kurze {\"U}bersicht {\"u}ber aktuelle Verfahren},
+    title = {Recent Advances in Object Detection in the Age of Deep Convolutional Neural Networks},
+    year = {2018}
+}
+
+
+@article{AttBen17,
+    author={A. {B{\"o}rcs} and B. {Nagy} and C. {Benedek}},
+    journal={IEEE Geoscience and Remote Sensing Letters},
+    title={Instant Object Detection in Lidar Point Clouds},
+    year={2017},
+    volume={14},
+    number={7},
+    pages={992-996},
+    doi={10.1109/LGRS.2017.2674799},
+    ISSN={1545-598X},
+    month={July}
+}
+
+@online{D435,
+    note = {9. April; D435 Produktseite},
+    title = {Intel{\textregistered} RealSense Depth Camera D435 Produktseite},
+    url = {https://click.intel.com/intelr-realsensetm-depth-camera-d435.html},
+    author = {Intel},
+    year = {2019},
+    urldate = {2019-08-06}
+}
+
+@online{Carolo-CupRegelwerk,
+    note = {9. April},
+    author = {Technische Universit{\"a}t Braunschweig},
+    title = {Carolo-Cup Regelwerk},
+    url = {https://wiki.ifr.ing.tu-bs.de/carolocup/regelwerk-0},
+    year = {2018},
+    urldate = {2019-04-09}
+}
+
+@article{Liu18,
+    author = {Liu, Kaiqi and Wang, Wenguang and Tharmarasa, Ratnasingham and Wang, Jun},
+    doi = {10.1109/TITS.2018.2857510},
+    journal = {IEEE Transactions on Intelligent Transportation Systems},
+    month = {09},
+    note = {9. April; Prim{\"a}r Tracking f{\"u}r weit entfernte Objekte},
+    pages = {1--14},
+    title = {Dynamic Vehicle Detection With Sparse Point Clouds Based on PE-CPD},
+    volume = {PP},
+    year = {2018}
+}
+
+@article{YifeiTian18,
+    author = {YifeiTian and Song, Wei and Fong, Simon and Shuanghui, Zou and Lee, Euy Soo and Jongtae, Rhee},
+    note = {9. April; Clustering mit Connected Components, Klassifikation mit K-NN},
+    title = {A 3D Obstacle Classification Method in Point Clouds Using K-NN},
+    year = {2018}
+}
+
+@article{Yuan18,
+    author = {Wang, Yuan and Shi, Tianyue and Yun, Peng and Tai, Lei and Liu, Ming},
+    note = {9. April; Segmentierung auf Basis von Squeeze Net, 90Hz auf 1080Ti},
+    title = {PointSeg: Real-Time Semantic Segmentation Based on 3D LiDAR Point Cloud},
+    year = {2018}
+}
+
+@article{Bogo14,
+    author = {BOGOSLAVSKYI, IGOR and STACHNISS, CYRILL},
+    note = {9. April; Interessante Ans{\"a}tze f{\"u}r Ground Removal und Clustering, prim{\"a}r f{\"u}r Lidar},
+    title = {Efficient Online Segmentation for Sparse 3D Laser Scans},
+    year = {2014}
+}
+
+@article{BDo11,
+    author = {{B. Douillard} and J. Underwood and N. Kuntz and V. Vlaskine and A. Quadros and P. Morton and A. Frenkel},
+    note = {10. April; Segmentation auch f{\"u}r Dense-Data, nicht echtzeitf{\"a}hig},
+    title = {On the Segmentation of 3D LIDAR Point Clouds},
+    year = {2011}
+}
+
+@article {Nan17,
+    title = {PolyFit: Polygonal Surface Reconstruction from Point Clouds},
+    author = {Liangliang Nan and Peter Wonka},
+    year = {2017},
+    note = {12. April; Reconstruktion von Polygonen aus Punktwolken, RANSAC und mergen nach Winkel Kriterium (vermutlich nur schwer machbar, da Rampe beliebe Steigung)}
+}
+
+@article {Deug13,
+    title = {Unsupervised Feature Learning for Classification of Outdoor 3D Scans},
+    author = {Mark De Deuge and Alastair Quadros and Calvin Hung and Bertrand Douillard},
+    year = {2013},
+    note = {15. April; Berechnung von Tiefenbilder, ueber Rays normal zur Bildebene}
+}
+
+@article{Wang19,
+    author    = {Yan Wang and
+        Wei{-}Lun Chao and
+            Divyansh Garg and
+            Bharath Hariharan and
+            Mark Campbell and
+            Kilian Q. Weinberger},
+    title     = {Pseudo-LiDAR from Visual Depth Estimation: Bridging the Gap in 3D
+        Object Detection for Autonomous Driving},
+    journal   = {CoRR},
+    volume    = {abs/1812.07179},
+    year      = {2018},
+    url       = {http://arxiv.org/abs/1812.07179},
+    archivePrefix = {arXiv},
+    eprint    = {1812.07179},
+    timestamp = {Fri, 26 Jul 2019 17:27:31 +0200},
+    biburl    = {https://dblp.org/rec/bib/journals/corr/abs-1812-07179},
+    bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@online{Carolo,
+    title =  {Carolo-Cup},
+    url = {https://wiki.ifr.ing.tu-bs.de/carolocup/carolo-cup},
+    author = {Technische Universit{\"a}t Braunschweig},
+    year = {2017},
+    urldate = {2019-07-19}
+}
+
+@article{HeChaoSuzuki08,
+    author = {He, Lifeng and Chao, Yuyan and Suzuki, Kenji},
+    year = {2008},
+    month = {06},
+    pages = {749-56},
+    title = {A Run-Based Two-Scan Labeling Algorithm},
+    volume = {17},
+    journal = {IEEE transactions on image processing : a publication of the IEEE Signal Processing Society},
+    doi = {10.1109/TIP.2008.919369}
+}
+
+@article{Hirsch05,
+    author = {Hirschm{\"u}ller, Heiko},
+    year = {2005},
+    title = {Accurate and Efficient Stereo Processing by Semi-Global Matching and Mutual Information},
+    note = {SGM}
+}
+
+@online{tensorflow2019,
+    author = "Tensorflow",
+    title  = "GPU support",
+    year   = "2019",
+    url    = "https://www.tensorflow.org/install/gpu",
+    urldate = {2019-08-06}
+}
+
+@inproceedings{Menze2015CVPR,
+    author = {Moritz Menze and Andreas Geiger},
+    title = {Object Scene Flow for Autonomous Vehicles},
+    booktitle = {Conference on Computer Vision and Pattern Recognition (CVPR)},
+    year = {2015}
+}
+
+@article{shi2019,
+    author    = {Shaoshuai Shi and
+        Zhe Wang and
+            Xiaogang Wang and
+            Hongsheng Li},
+    title     = {Part-A\({}^{\mbox{2}}\) Net: 3D Part-Aware and Aggregation Neural
+        Network for Object Detection from Point Cloud},
+    journal   = {CoRR},
+    volume    = {abs/1907.03670},
+    year      = {2019},
+    url       = {http://arxiv.org/abs/1907.03670},
+    archivePrefix = {arXiv},
+    eprint    = {1907.03670},
+    timestamp = {Thu, 01 Aug 2019 08:43:00 +0200},
+    biburl    = {https://dblp.org/rec/bib/journals/corr/abs-1907-03670},
+    bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{yolov3,
+    title={YOLOv3: An Incremental Improvement},
+    author={Redmon, Joseph and Farhadi, Ali},
+    journal = {arXiv},
+    year={2018}
+}
+
+@thesis{marceldebout2012,
+    author = {Marcel Debout},
+    title  = {Detektion und Lokalisierung von Hindernissen f{\"u}r ein autonomes Modellfahrzeug unter Verwendung der ASUS XtionPRO Tiefenbildkamera},
+    school = {Ulm University},
+    year   = {2012},
+    type = {Bachelor's Thesis}
+}
+
+@phdthesis{danielmeisner2016,
+    author = {Daniel Mei{\ss}ner},
+    title  = {Intersection-Based Road User Tracking Using a Classifying-Multiple-Model PHD Filter},
+    school = {Ulm University},
+    year   = {2016}
+}
+
+@article{rcnn,
+    author    = {Ross B. Girshick and
+        Jeff Donahue and
+            Trevor Darrell and
+            Jitendra Malik},
+    title     = {Rich feature hierarchies for accurate object detection and semantic segmentation},
+    journal   = {CoRR},
+    volume    = {abs/1311.2524},
+    year      = {2013},
+    url       = {http://arxiv.org/abs/1311.2524},
+    archivePrefix = {arXiv},
+    eprint    = {1311.2524},
+    timestamp = {Mon, 13 Aug 2018 16:48:09 +0200},
+    biburl    = {https://dblp.org/rec/bib/journals/corr/GirshickDDM13},
+    bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{ssd,
+    author    = {Wei Liu and
+        Dragomir Anguelov and
+            Dumitru Erhan and
+            Christian Szegedy and
+            Scott E. Reed and
+            Cheng{-}Yang Fu and
+            Alexander C. Berg},
+    title     = {{SSD:} Single Shot MultiBox Detector},
+    journal   = {CoRR},
+    volume    = {abs/1512.02325},
+    year      = {2015},
+    url       = {http://arxiv.org/abs/1512.02325},
+    archivePrefix = {arXiv},
+    eprint    = {1512.02325},
+    timestamp = {Mon, 13 Aug 2018 16:48:29 +0200},
+    biburl    = {https://dblp.org/rec/bib/journals/corr/LiuAESR15},
+    bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{yolo,
+    author    = {Joseph Redmon and
+        Santosh Kumar Divvala and
+            Ross B. Girshick and
+            Ali Farhadi},
+    title     = {You Only Look Once: Unified, Real-Time Object Detection},
+    journal   = {CoRR},
+    volume    = {abs/1506.02640},
+    year      = {2015},
+    url       = {http://arxiv.org/abs/1506.02640},
+    archivePrefix = {arXiv},
+    eprint    = {1506.02640},
+    timestamp = {Mon, 13 Aug 2018 16:48:08 +0200},
+    biburl    = {https://dblp.org/rec/bib/journals/corr/RedmonDGF15},
+    bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@online{mec,
+    author = "Dr. R{\"u}diger W. Henn",
+    title  = "MEC-View project homepage",
+    year   = "2019",
+    url    = "http://mec-view.de/",
+    urldate = {2019-08-12}
+}
+
+@inproceedings{AttBen14,
+    title={Fast 3-D Urban Object Detection on Streaming Point Clouds},
+    author={Attila Borcs and Bal{\'a}zs Nagy and Csaba Benedek},
+    booktitle={ECCV Workshops},
+    year={2014}
+}
+
+@article{LeNail2019NN,
+    journal = {Journal of Open Source Software},
+    doi = {10.21105/joss.00747},
+    issn = {2475-9066},
+    number = {33},
+    publisher = {The Open Journal},
+    title = {NN-SVG: Publication-Ready Neural Network Architecture Schematics},
+    url = {http://dx.doi.org/10.21105/joss.00747},
+    volume = {4},
+    author = {LeNail, Alexander},
+    pages = {747},
+    date = {2019-01-15},
+    year = {2019},
+    month = {1},
+    day = {15},
+}
+
+@inproceedings{ioumurks,
+    author={O. {Russakovsky} and L. {Li} and L. {Fei-Fei}},
+    booktitle={2015 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+    title={Best of both worlds: Human-machine collaboration for object annotation},
+    year={2015},
+    volume={},
+    number={},
+    pages={2121-2131},
+    doi={10.1109/CVPR.2015.7298824},
+    ISSN={1063-6919},
+    month={June}
+}
+
+@online{pclAbout,
+    author = "Radu Bogdan Rusu and Steve Cousins",
+    title  = "Point Cloud Library Website",
+    year   = "2019",
+    url    = "http://pointclouds.org/about/#open",
+    urldate = {2019-08-28}
+}
+
+@report{stereoHaw10,
+    author = {Gregory F{\"o}ll},
+    title = {Stereo Vision: Vergleich verschiedener
+        Algorithmen zur L{\"o}sung des
+            Korrespondenzproblems},
+    year = {2010},
+    institution = {Hamburg University of Applied Science},
+    type = {research report}
+}
+
+@online{middleburyStereo3,
+    author = {D. {Scharstein}},
+    title = {Middlebury Stereo Evaluation - Version 3},
+    year = {2019},
+    url = {http://vision.middlebury.edu/stereo/eval3/},
+    urldate = {2019-08-28}
+}
+
+@online{sgbmOpenCv,
+    author = {Maksim Shabunin},
+    title = {OpenCV Stereo SGBM},
+    year = {2014},
+    month = {09},
+    url = {https://docs.opencv.org/4.1.1/d2/d85/classcv_1_1StereoSGBM.html},
+    urldate = {2019-08-28}
+}
+
+@article{birchfieldTomasi,
+    author={S. {Birchfield} and C. {Tomasi}},
+    journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+    title={A pixel dissimilarity measure that is insensitive to image sampling},
+    year={1998},
+    volume={20},
+    number={4},
+    pages={401-406},
+    doi={10.1109/34.677269},
+    ISSN={0162-8828},
+    month={April}
+}
+
+@article{sgmHeidelberg,
+    author      = {A. {Drory} and C {Haubold} and S. {Avidan} and F. A. {Hamprecht}},
+    title       = {Semi-Global Matching: a principled derivation in terms of Message Passing},
+    institution = {Tel Aviv University, University of Heidelberg},
+    year        = {2014}
+}
+
+@article{sgm2,
+    author={Heiko {Hirschm{\"u}ller}},
+    journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+    title={Stereo Processing by Semiglobal Matching and Mutual Information},
+    year={2008},
+    volume={30},
+    number={2},
+    pages={328-341},
+    doi={10.1109/TPAMI.2007.1166},
+    ISSN={0162-8828},
+    month={Feb}
+}
+
+@article{Fusiello2000,
+    author="Fusiello, Andrea
+        and Trucco, Emanuele
+        and Verri, Alessandro",
+    title="A compact algorithm for rectification of stereo pairs",
+    journal="Machine Vision and Applications",
+    year="2000",
+    month="Jul",
+    day="01",
+    volume="12",
+    number="1",
+    pages="16--22",
+    issn="1432-1769",
+    doi="10.1007/s001380050120",
+    url="https://doi.org/10.1007/s001380050120"
+}
+
+@article{Fusiello2011,
+    author="Fusiello, Andrea
+        and Irsara, Luca",
+    title="Quasi-Euclidean epipolar rectification of uncalibrated images",
+    journal="Machine Vision and Applications",
+    year="2011",
+    month="Jul",
+    day="01",
+    volume="22",
+    number="4",
+    pages="663--670",
+    issn="1432-1769",
+    doi="10.1007/s00138-010-0270-3",
+    url="https://doi.org/10.1007/s00138-010-0270-3"
+}
+
+@inproceedings{Lim2004,
+    author={S. -. {Lim} and A. {Mittal} and L. S. {Davis} and N. {Paragios}},
+    booktitle={2004 International Conference on Image Processing, 2004. ICIP '04.},
+    title={Uncalibrated stereo rectification for automatic 3D surveillance},
+    year={2004},
+    volume={2},
+    number={},
+    pages={1357-1360 Vol.2},
+    doi={10.1109/ICIP.2004.1419753},
+    ISSN={1522-4880},
+    month={Oct}
+}
+
+@article{Oram2002,
+    author = {Oram, Daniel},
+    year = {2002},
+    month = {04},
+    pages = {},
+    title = {Rectification for Any Epipolar Geometry},
+    journal = {Proc. British Machine Vision Conf},
+    doi = {10.5244/C.15.67}
+}
+
+@inproceedings{Konolige2007,
+    author={K. {Konolige} and M. {Agrawal}},
+    booktitle={Proceedings 2007 IEEE International Conference on Robotics and Automation},
+    title={Frame-Frame Matching for Realtime Consistent Visual Mapping},
+    year={2007},
+    volume={},
+    number={},
+    pages={2803-2810},
+    doi={10.1109/ROBOT.2007.363896},
+    ISSN={1050-4729},
+    month={April}
+}
+
+@article{Hodgkin1952,
+    author = {Hodgkin, A. L. and Huxley, A. F.},
+    title = {A quantitative description of membrane current and its application to conduction and excitation in nerve},
+    journal = {The Journal of Physiology},
+    volume = {117},
+    number = {4},
+    pages = {500-544},
+    doi = {10.1113/jphysiol.1952.sp004764},
+    url = {https://physoc.onlinelibrary.wiley.com/doi/abs/10.1113/jphysiol.1952.sp004764},
+    eprint = {https://physoc.onlinelibrary.wiley.com/doi/pdf/10.1113/jphysiol.1952.sp004764},
+    year = {1952}
+}
+
+@book{bishop1995,
+    author = {Bishop, Christopher M.},
+    title = {Neural Networks for Pattern Recognition},
+    year = {1995},
+    isbn = {0198538642},
+    publisher = {Oxford University Press, Inc.},
+    address = {New York, NY, USA},
+}
+
+@book{hebb1949,
+    added-at = {2011-06-02T00:21:57.000+0200},
+    address = {New York},
+    author = {Hebb, Donald O.},
+    biburl = {https://www.bibsonomy.org/bibtex/26432ae617e6db0127c8b197bf760d99e/mhwombat},
+    citeulike-article-id = {500649},
+    citeulike-linkout-0 = {http://www.amazon.ca/exec/obidos/redirect?tag=citeulike09-20\&amp;path=ASIN/0805843000},
+    citeulike-linkout-1 = {http://www.amazon.de/exec/obidos/redirect?tag=citeulike01-21\&amp;path=ASIN/0805843000},
+    citeulike-linkout-2 = {http://www.amazon.fr/exec/obidos/redirect?tag=citeulike06-21\&amp;path=ASIN/0805843000},
+    citeulike-linkout-3 = {http://www.amazon.jp/exec/obidos/ASIN/0805843000},
+    citeulike-linkout-4 = {http://www.amazon.co.uk/exec/obidos/ASIN/0805843000/citeulike00-21},
+    citeulike-linkout-5 = {http://www.amazon.com/exec/obidos/redirect?tag=citeulike07-20\&path=ASIN/0805843000},
+    citeulike-linkout-6 = {http://www.worldcat.org/isbn/0805843000},
+    citeulike-linkout-7 = {http://books.google.com/books?vid=ISBN0805843000},
+    citeulike-linkout-8 = {http://www.amazon.com/gp/search?keywords=0805843000\&index=books\&linkCode=qs},
+    citeulike-linkout-9 = {http://www.librarything.com/isbn/0805843000},
+    day = 15,
+    file = {:neural_nets/Hebb 1949.pdf:PDF},
+    groups = {public},
+    howpublished = {Hardcover},
+    interhash = {ba8f8b92a0de2c83bdbcc9d742235a59},
+    intrahash = {6432ae617e6db0127c8b197bf760d99e},
+    isbn = {0-8058-4300-0},
+    keywords = {MSc checked network neural seminal},
+    month = jun,
+    posted-at = {2006-02-10 16:35:34},
+    priority = {2},
+    publisher = {Wiley},
+    timestamp = {2016-07-12T19:25:30.000+0200},
+    title = {The organization of behavior: {A} neuropsychological
+        theory},
+    year = 1949
+}
+
+@article{hornik1991,
+    author = {Hornik, Kurt},
+    title = {Approximation Capabilities of Multilayer Feedforward Networks},
+    journal = {Neural Netw.},
+    issue_date = {1991},
+    volume = {4},
+    number = {2},
+    month = mar,
+    year = {1991},
+    issn = {0893-6080},
+    pages = {251--257},
+    numpages = {7},
+    url = {http://dx.doi.org/10.1016/0893-6080(91)90009-T},
+    doi = {10.1016/0893-6080(91)90009-T},
+    acmid = {109700},
+    publisher = {Elsevier Science Ltd.},
+    address = {Oxford, UK, UK},
+}
+
+@incollection{alexNet,
+    title = {ImageNet Classification with Deep Convolutional Neural Networks},
+    author = {Alex Krizhevsky and Sutskever, Ilya and Hinton, Geoffrey E},
+    booktitle = {Advances in Neural Information Processing Systems 25},
+    editor = {F. Pereira and C. J. C. Burges and L. Bottou and K. Q. Weinberger},
+    pages = {1097--1105},
+    year = {2012},
+    publisher = {Curran Associates, Inc.},
+    url = {http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf}
+}
+
+@inproceedings{imageNet,
+    author={J. {Deng} and W. {Dong} and R. {Socher} and L. {Li} and {Kai Li} and {Li Fei-Fei}},
+    booktitle={2009 IEEE Conference on Computer Vision and Pattern Recognition},
+    title={ImageNet: A large-scale hierarchical image database},
+    year={2009},
+    volume={},
+    number={},
+    pages={248-255},
+    doi={10.1109/CVPR.2009.5206848},
+    ISSN={1063-6919},
+    month={June}
+}
+
+@inproceedings{stereoError,
+    author = {Gallup, David and Frahm, Jan-Michael and Mordohai, Philippos and Pollefeys, Marc},
+    year = {2008},
+    month = {06},
+    pages = {},
+    title = {Variable Baseline/Resolution Stereo},
+    doi = {10.1109/CVPR.2008.4587671}
+}
+
+@techreport{d435Structured,
+    author      = {A. {Grunnet-Jepsen} and  J. N. {Sweetser} P. {Winer} and A. {Takagi} and J. {Woodfill}},
+    title       = "Projectors for Intel RealSense Depth Cameras D4xx",
+    institution = "Intel",
+    year        = "2019"
+}
+
+@book{minsky69perceptrons,
+    added-at = {2008-05-16T13:57:01.000+0200},
+    address = {Cambridge, MA, USA},
+    author = {Minsky, Marvin and Papert, Seymour},
+    biburl = {https://www.bibsonomy.org/bibtex/206a5a6751b3e61408455fca2ed8d87fc/sb3000},
+    description = {: mf : blob : » bibtex},
+    interhash = {d80d4948a422623047f1b800272c0389},
+    intrahash = {06a5a6751b3e61408455fca2ed8d87fc},
+    keywords = {linear-classification neural-networks seminal},
+    publisher = {MIT Press},
+    timestamp = {2008-05-16T13:57:02.000+0200},
+    title = {Perceptrons: An Introduction to Computational Geometry},
+    year = 1969
+}
+
+@book{digitalImageProcessing,
+    author = {Gonzalez, Rafael C. and Woods, Richard E.},
+    title = {Digital Image Processing (3rd Edition)},
+    year = {2006},
+    isbn = {013168728X},
+    publisher = {Prentice-Hall, Inc.},
+    address = {Upper Saddle River, NJ, USA},
+}
+
+@inproceedings{abubaker2007,
+    author={A. {AbuBaker} and R. {Qahwaji} and S. {Ipson} and M. {Saleh}},
+    booktitle={2007 IEEE International Conference on Signal Processing and Communications},
+    title={One Scan Connected Component Labeling Technique},
+    year={2007},
+    volume={},
+    number={},
+    pages={1283-1286},
+    doi={10.1109/ICSPC.2007.4728561},
+    ISSN={},
+    month={Nov}
+}
+
+@inproceedings{scherer2010,
+    author="Scherer, Dominik
+        and M{\"u}ller, Andreas
+        and Behnke, Sven",
+    editor="Diamantaras, Konstantinos
+        and Duch, Wlodek
+        and Iliadis, Lazaros S.",
+    title="Evaluation of Pooling Operations in Convolutional Architectures for Object Recognition",
+    booktitle="Artificial Neural Networks -- ICANN 2010",
+    year="2010",
+    publisher="Springer Berlin Heidelberg",
+    address="Berlin, Heidelberg",
+    pages="92--101",
+    isbn="978-3-642-15825-4"
+}
+
+@article{robbins1951,
+    author = "Robbins, Herbert and Monro, Sutton",
+    doi = "10.1214/aoms/1177729586",
+    fjournal = "The Annals of Mathematical Statistics",
+    journal = "Ann. Math. Statist.",
+    month = "09",
+    number = "3",
+    pages = "400--407",
+    publisher = "The Institute of Mathematical Statistics",
+    title = "A Stochastic Approximation Method",
+    url = "https://doi.org/10.1214/aoms/1177729586",
+    volume = "22",
+    year = "1951"
+}
+
+@article{pearson1901,
+    added-at = {2009-04-04T18:01:35.000+0200},
+    author = {Pearson, K.},
+    biburl = {https://www.bibsonomy.org/bibtex/2e3cae747969ec5a442f434a00d9d4f61/dieudonnew},
+    interhash = {c2a88da8d5068eb09941df30fa3b0f23},
+    intrahash = {e3cae747969ec5a442f434a00d9d4f61},
+    issue = {6},
+    journal = {Philosophical Magazine},
+    keywords = {imported},
+    pages = {559-572},
+    timestamp = {2009-04-04T18:01:35.000+0200},
+    title = {On Lines and Planes of Closest Fit to Systems of Points in Space},
+    volume = 2,
+    year = 1901
+}
+
+@book{hotelling1933analysis,
+    title={Analysis of a Complex of Statistical Variables Into Principal Components},
+    author={Hotelling, H.},
+    url={https://books.google.de/books?id=qJfXAAAAMAAJ},
+    year={1933},
+    publisher={Warwick \& York}
+}
+
+@techreport{ISO8855,
+    type = {Standard},
+    key = {ISO 8855:2011},
+    month = mar,
+    year = {2011},
+    title = {{Road vehicles - Vehicle dynamics and road-holding ability - Vocabulary}},
+    volume = {2011},
+    address = {Geneva, CH},
+    institution = {International Organization for Standardization},
+    author = {ISO}
+}
+
+@inproceedings{guindel18,
+    author="Guindel, Carlos
+        and Mart{\'i}n, David
+        and Armingol, Jos{\'e} Mar{\'i}a",
+    editor="Moreno-D{\'i}az, Roberto
+        and Pichler, Franz
+        and Quesada-Arencibia, Alexis",
+    title="Stereo Vision-Based Convolutional Networks for Object Detection in Driving Environments",
+    booktitle="Computer Aided Systems Theory -- EUROCAST 2017",
+    year="2018",
+    publisher="Springer International Publishing",
+    address="Cham",
+    pages="427--434",
+    isbn="978-3-319-74727-9"
+}
+
+@article{qian16,
+    author = {Long, Qian and Xie, Q and Mita, S and Ishimaru, K and Shirai, N},
+    year = {2016},
+    month = {01},
+    pages = {9-14},
+    title = {Small object detection based on stereo vision},
+    volume = {7}
+}
+
+@inproceedings{chang2018pyramid,
+    title={Pyramid Stereo Matching Network},
+    author={Chang, Jia-Ren and Chen, Yong-Sheng},
+    booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+    pages={5410--5418},
+    year={2018}
+}
+
+@inproceedings{luo16,
+    author={W. {Luo} and A. G. {Schwing} and R. {Urtasun}},
+    booktitle={2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+    title={Efficient Deep Learning for Stereo Matching},
+    year={2016},
+    volume={},
+    number={},
+    pages={5695-5703},
+    doi={10.1109/CVPR.2016.614},
+    ISSN={1063-6919},
+    month={June}
+}
+
+@article{zbontar16,
+    author  = {Jure {\v{Z}}bontar and Yann LeCun},
+    title   = {Stereo Matching by Training a Convolutional Neural Network to Compare Image Patches},
+    journal = {Journal of Machine Learning Research},
+    year    = {2016},
+    volume  = {17},
+    number  = {65},
+    pages   = {1-32},
+    url     = {http://jmlr.org/papers/v17/15-535.html}
+}
+
+@techreport{jepsen19,
+    author = {Anders Grunnet-Jepsen and Dave Tong},
+    title = {Depth Post-Processing for Intel RealSense D400 Depth Cameras},
+    year = {2019}
+}
+
+@book{informationRetrieval,
+    author = {Rijsbergen, C. J. Van},
+    title = {Information Retrieval},
+    year = {1979},
+    isbn = {0408709294},
+    edition = {2nd},
+    publisher = {Butterworth-Heinemann},
+    address = {Newton, MA, USA},
+}
+
+@online{opencvpc,
+    url = {https://docs.opencv.org/2.4/modules/calib3d/doc/camera_calibration_and_3d_reconstruction.html},
+    title = {Camera Calibration and 3D Reconstruction},
+    author = {Elena Fedotova},
+    year = {2011},
+    urldate = {2019-09-24}
+}
+
+@book{autonomesFahren,
+    author    = "Maurer, Markus and Gerdes, J. Christian and Lenz, Barbara  and Winner, Hermann",
+    title     = "Autonomes Fahren",
+    publisher = "Springer",
+    year      = "2015"
+}
+
+@article{lenet,
+    title = "Gradient-based learning applied to document recognition",
+    keywords = "Convolutional neural networks, Document recognition, Finite state transducers, Gradient-based learning, Graph transformer networks, Machine learning, Neural networks, Optical character recognition (OCR)",
+    author = "Yann LeCun and L{\'e}on Bottou and Yoshua Bengio and Patrick Haffner",
+    year = "1998",
+    doi = "10.1109/5.726791",
+    language = "English (US)",
+    volume = "86",
+    pages = "2278--2323",
+    journal = "Proceedings of the IEEE",
+    issn = "0018-9219",
+    publisher = "Institute of Electrical and Electronics Engineers Inc.",
+    number = "11",
+}

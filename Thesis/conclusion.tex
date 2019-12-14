@@ -1,0 +1,29 @@
+\chapter{Conclusion} \label{sec:conc}
+The objective of this work was to implement an algorithm which is able to detect and classify all objects occurring on the track of the Carolo-Cup in real time using the point cloud acquired by the \ac{d435}.
+
+For this task an algorithm was implemented and improved to be used with point clouds acquired by stereo camera systems. 
+The algorithm consists of a separate object detection and classification. 
+For the detection the three dimensional space is subdivided into a two dimensional grid. 
+Every cell of the grid is assigned a type, based on the number of points and the variance of the height of the points in the cell. 
+All cells that belong to the foreground are clustered using connected components labeling on two scales two determine objects.
+For each object an pseudo depth image is extracted and classified using a \ac{cnn}. 
+Additionally a bounding box is estimated for every cluster.
+To detect slopes a ground plane is estimated.
+
+The proposed algorithm is able to robustly detect most of the required objects in the required time.
+It was shown that the performance of the detector is better than the old obstacle detection, especially on the slope. 
+
+The detection algorithm of \cite{AttBen17} was adapted for the usage with point clouds generated from stereo data. The proposed changes have improved the overall performance of the algorithm when compared with both the original algorithm on stereo and Lidar data.
+
+Furthermore the algorithm has been evaluated on data acquired with stereo systems in the real world. 
+With this data the performance depends on the quality of the point cloud. 
+As a result of the small baseline distance of the camera system of the Kitti dataset the quality of the point cloud is only sufficient for a distance of up to ten meters.
+Due to the larger baseline of the system in Ulm-Lehr the quality of the point cloud is much better, for this data the algorithm is able to detect objects at a distance of over $50\si{\m}$.
+
+\section{Future improvements}
+The performance of the algorithm depends on the quality of the point cloud, thus a better point cloud improves the quality of the detections. 
+The quality of the point cloud can be improved by using a better stereo matching algorithm, such as \cite{chang2018pyramid} \cite{luo16} \cite{zbontar16}. 
+They perform stereo matching using \ac{cnn}s, this improves the quality of the point cloud but requires a lot of processing time. 
+Thus it is not a viable option for the Carolo-Cup, but for the real world data it can improve the quality of the point clouds.
+
+To make the detection less prone to the varying quality of the point cloud the classification of the cell needs to be improved. For this an \ac{mlp} which classifies the histogram over the $z$ values of all points in a cell could be used. Such a neural network would run sufficiently fast, even without a \ac{gpu}, but due to limitations in time this approach has not been pursued.
