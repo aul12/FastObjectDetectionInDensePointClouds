@@ -36,9 +36,9 @@ typeSparse.png: ../Material/typeSparse.png
 %.pdf: ../Material/%.svg
 	inkscape --file=$< --export-area-drawing --without-gui --export-pdf=$@
 
-coord.png: ../Material/coord.scad
-	$(OPENSCAD) -o coord.png --imgsize=1920,1080 --projection=ortho --colorscheme=Nature --camera=-0.625456,-0.307041,1.632,70,0,135,26 ../Material/coord.scad
-	convert coord.png -fuzz 5% -transparent white coord.png
+#coord.png: ../Material/coord.scad
+#	$(OPENSCAD) -o coord.png --imgsize=1920,1080 --projection=ortho --colorscheme=Nature --camera=-0.625456,-0.307041,1.632,70,0,135,26 ../Material/coord.scad
+#	convert coord.png -fuzz 5% -transparent white coord.png
 
 disparity.png: ../Material/disparity.png
 	python3 ../Util/Evaluation/grey2color.py ../Material/disparity.png disparity.png
