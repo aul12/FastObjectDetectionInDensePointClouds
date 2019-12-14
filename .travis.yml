@@ -1,7 +1,7 @@
 sudo: required
 dist: bionic
 before_install:
-    - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended latexmk texlive-lang-german texlive-font-utils texlive-science texlive-pictures rubber graphviz inkscape
+    - sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra dvipng texlive-latex-recommended latexmk texlive-lang-german texlive-font-utils texlive-science texlive-pictures rubber graphviz inkscape openscad
       
 git:
     submodules: false 
