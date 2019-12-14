@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/aul12/FastObjectDetectionInDensePointClouds.svg?branch=master)](https://travis-ci.org/aul12/FastObjectDetectionInDensePointClouds)
 # FastObjectDetectionInDensePointClouds
 Bachelorthesis: "Fast Object Detection in Dense Point Clouds" at Institute of Measurement, Control and Microtechnology at Ulm University
 
