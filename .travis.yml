@@ -10,9 +10,9 @@ script:
     - mkdir output
     - cd Thesis
     - make
-    - mv main_mrm.pdf output/Thesis.pdf
+    - mv main_mrm.pdf ../output/Thesis.pdf
     - cd ../Presentation
-    - mv main.pdf output/Presentation.pdf
+    - mv main.pdf ../output/Presentation.pdf
 
 deploy:
     provider: pages
