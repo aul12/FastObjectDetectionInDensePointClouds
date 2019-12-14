@@ -12,6 +12,7 @@ script:
     - make
     - mv main_mrm.pdf ../output/Thesis.pdf
     - cd ../Presentation
+    - make
     - mv main.pdf ../output/Presentation.pdf
 
 deploy:
