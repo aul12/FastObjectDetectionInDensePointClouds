@@ -13,11 +13,11 @@ show: main.pdf
 present: main.pdf
 	pdfpc main.pdf
 
-%.pdf: ../Materalien/%.svg
+%.pdf: ../Material/%.svg
 	inkscape --file=$< --export-area-drawing --without-gui --export-pdf=$@
 
-pca.png: ../Materialien/Presentation/pca.png
-	convert ../Materalien/Presentation/pca.png -crop 100%x+300+0 pca.png
+pca.png: ../Material/Presentation/pca.png
+	convert ../Material/Presentation/pca.png -crop 100%x+300+0 pca.png
 	convert pca.png -crop 100%x-000+0 pca.png
 
 clean:

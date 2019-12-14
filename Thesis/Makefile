@@ -4,7 +4,7 @@ EVINCE=evince
 
 all: main_mrm.pdf
 
-main_mrm.pdf: *.tex pc0Clutter.png pc0NotMerged.png pc1OverClustering.png pc1Sign.png typeSparse.png bibliography.bib ../Materalien/* cnn.pdf EpipolarGeometry.pdf car.pdf coord.png disparity.png
+main_mrm.pdf: *.tex pc0Clutter.png pc0NotMerged.png pc1OverClustering.png pc1Sign.png typeSparse.png bibliography.bib ../Material/* cnn.pdf EpipolarGeometry.pdf coord.png disparity.png
 	$(RUBBER) -d main_mrm.tex
 
 spelling: *.tex
@@ -17,30 +17,30 @@ spelling: *.tex
 show: main_mrm.pdf
 	screen -dm $(EVINCE) main_mrm.pdf
 
-pc0Clutter.png: ../Materalien/pc0Clutter.png
-	convert ../Materalien/pc0Clutter.png -fuzz 0% -transparent black pc0Clutter.png
+pc0Clutter.png: ../Material/pc0Clutter.png
+	convert ../Material/pc0Clutter.png -fuzz 0% -transparent black pc0Clutter.png
 
-pc0NotMerged.png: ../Materalien/pc0NotMerged.png
-	convert ../Materalien/pc0NotMerged.png -fuzz 0% -transparent black pc0NotMerged.png
+pc0NotMerged.png: ../Material/pc0NotMerged.png
+	convert ../Material/pc0NotMerged.png -fuzz 0% -transparent black pc0NotMerged.png
 
-pc1OverClustering.png: ../Materalien/pc1OverClustering.png
-	convert ../Materalien/pc1OverClustering.png -fuzz 0% -transparent black pc1OverClustering.png
+pc1OverClustering.png: ../Material/pc1OverClustering.png
+	convert ../Material/pc1OverClustering.png -fuzz 0% -transparent black pc1OverClustering.png
 
-pc1Sign.png: ../Materalien/pc1Sign.png
-	convert ../Materalien/pc1Sign.png -fuzz 0% -transparent black pc1Sign.png
+pc1Sign.png: ../Material/pc1Sign.png
+	convert ../Material/pc1Sign.png -fuzz 0% -transparent black pc1Sign.png
 
-typeSparse.png: ../Materalien/typeSparse.png
-	convert ../Materalien/typeSparse.png -fuzz 0% -transparent black typeSparse.png
+typeSparse.png: ../Material/typeSparse.png
+	convert ../Material/typeSparse.png -fuzz 0% -transparent black typeSparse.png
 
-%.pdf: ../Materalien/%.svg
+%.pdf: ../Material/%.svg
 	inkscape --file=$< --export-area-drawing --without-gui --export-pdf=$@
 
-coord.png: ../Materalien/coord.scad
-	openscad -o coord.png --imgsize=1920,1080 --projection=ortho --colorscheme=Nature --camera=-0.625456,-0.307041,1.632,70,0,135,26 ../Materalien/coord.scad
+coord.png: ../Material/coord.scad
+	openscad -o coord.png --imgsize=1920,1080 --projection=ortho --colorscheme=Nature --camera=-0.625456,-0.307041,1.632,70,0,135,26 ../Material/coord.scad
 	convert coord.png -fuzz 5% -transparent white coord.png
 
-disparity.png: ../Materalien/disparity.png
-	python3 ../Util/Evaluation/grey2color.py ../Materalien/disparity.png disparity.png
+disparity.png: ../Material/disparity.png
+	python3 ../Util/Evaluation/grey2color.py ../Material/disparity.png disparity.png
 	convert disparity.png -crop 100%x+70+0 disparity.png
 
 clean:
